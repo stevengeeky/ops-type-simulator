@@ -145,8 +145,86 @@ void ESTJ() {
   simulate("Te,Si,Ne,Fi", animals, modalities);
 }
 
+void INTP() {
+  std::vector<Matrix> animals{
+    Matrix{
+     R{1, -1, 0, 0},
+     R{1, -1, 0, 0},
+     R{0, 0, 1, 0},
+     R{0, 0, 0, 1}
+    },
+    Matrix{
+     R{1, 0, -1, 0},
+     R{0, 1, 0, 0},
+     R{1, 0, -1, 0},
+     R{0, 0, 0, 1}
+    },
+    Matrix{
+     R{1, 0, 0, 0},
+     R{0, 1, 0, 0},
+     R{0, 0, 1, -1},
+     R{0, 0, 1, -1}
+    },
+    Matrix{
+     R{1, 0, 0, 0},
+     R{0, 1, 0, -1},
+     R{0, 0, 1, 0},
+     R{0, 1, 0, -1}
+    }
+  };
+
+  Matrix modalities{
+    R{1, 0, 0, 0},
+    R{0, -1, 0, 0},
+    R{0, 0, 1, 0},
+    R{0, 0, 0, -1}
+  };
+
+  simulate("Ti,Ne,Si,Fe", animals, modalities);
+}
+
+void ISFP() {
+  std::vector<Matrix> animals{
+    Matrix{
+     R{1, 0, 0, 0},
+     R{0, 1, 0, 0},
+     R{0, 0, 1, -1},
+     R{0, 0, 1, -1}
+    },
+    Matrix{
+     R{1, 0, 0, 0},
+     R{0, -1, 0, 1},
+     R{0, 0, 1, 0},
+     R{0, -1, 0, 1}
+    },
+    Matrix{
+     R{-1, 0, 1, 0},
+     R{0, 1, 0, 0},
+     R{-1, 0, 1, 0},
+     R{0, 0, 0, 1}
+    },
+    Matrix{
+     R{-1, 1, 0, 0},
+     R{-1, 1, 0, 0},
+     R{0, 0, 1, 0},
+     R{0, 0, 0, 1}
+    }
+  };
+
+  Matrix modalities{
+    R{1, 0, 0, 0},
+    R{0, -1, 0, 0},
+    R{0, 0, 1, 0},
+    R{0, 0, 0, -1}
+  };
+
+  simulate("Fi,Se,Ni,Te", animals, modalities);
+}
+
 int main() {
-  INTJ();
+  // INTJ();
+  // ISFP();
+  INTP();
 
   return 0;
 }
